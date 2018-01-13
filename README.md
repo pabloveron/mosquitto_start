@@ -61,7 +61,7 @@ Here the inspiration source code [link1](www.eclipse.org/paho/clients/python/)
 	- python subscribe.py
 	- pyhton publish.py “test”
 
-# Mosquito Configuration Properties 
+#### Mosquito Configuration Properties 
 	
 	- pid_file = contains the pid number. Simplifies the search of the process id.
 	- persistence =If true, connection, subscription and message data will be written to the disk in mosquitto.db
