@@ -4,24 +4,25 @@ Simple mosquitto project to subscribe and publish messages running in raspberry 
 ## Steps to install mosquitto from scratch (on RASPBIAN STRETCH LITE. download page)
 
 - Update the package update list. Download the list to keep the versions updated.
-	sudo apt-get update
+	- sudo apt-get update
 
 - Dist upgrade sudo. Will install the packages to resolve the dependencies
-	apt-get dist-upgrade
+	- apt-get dist-upgrade
 
 - Install mosquitto and mosquitto-clients that includes command clients applications to test publisher and subscriber features
-	sudo apt-get install mosquitto mosquitto-clients -y
+	- sudo apt-get install mosquitto mosquitto-clients -y
+	
 - Enable the subscriber test client
-	mosquitto_sub -t “testqueue/testtopic”
+	- mosquitto_sub -t “testqueue/testtopic”
 
 - Send the message using publisher client
-	mosquitto_pub -t “testqueue/testtopic” -m “testing”
+	- mosquitto_pub -t “testqueue/testtopic” -m “testing”
 
-#Python code to publish and subscribe
+### Python code to publish and subscribe
 
 First of all, need to install python tools and library paho-mqtt
-	sudo apt-get install python-pip
-	pip install paho-mqtt
+	- sudo apt-get install python-pip
+	- pip install paho-mqtt
 
 
 Here the inspiration source code [link](www.eclipse.org/paho/clients/python/)
