@@ -1,7 +1,7 @@
-# mosquitto_start
+# mosquitto and raspbian likte
 Simple mosquitto project to subscribe and publish messages running in raspberry py from scratch
 
-## Steps to install mosquitto from scratch (on RASPBIAN STRETCH LITE. download page)
+## Steps to install mosquitto from scratch (on RASPBIAN STRETCH LITE)
 
 - Update the package update list. Download the list to keep the versions updated.
 	- sudo apt-get update
@@ -27,7 +27,7 @@ First of all, need to install python tools and library paho-mqtt
 
 Here the inspiration source code [link](www.eclipse.org/paho/clients/python/)
 
-publish.py
+#### publish.py
 ># -*- coding: utf-8 -*-
 >import paho.mqtt.client as mqtt
 >import sys
@@ -36,30 +36,30 @@ publish.py
 >mqttc.publish("broker/messages", sys.argv[1])
 >mqttc.loop(2) #timeout = 2s
 
-Subscribe.py
->import paho.mqtt.client as mqtt
-># The callback for when the client receives a CONNACK response from the server.
->def on_connect(client, userdata, flags, rc):
+#### Subscribe.py
+> import paho.mqtt.client as mqtt
+> #The callback for when the client receives a CONNACK response from the server.
+> def on_connect(client, userdata, flags, rc):
 >    print("Connected with result code "+str(rc))
->    # Subscribing in on_connect() means that if we lose the connection and
->    # reconnect then subscriptions will be renewed.
+>    #Subscribing in on_connect() means that if we lose the connection and
+>    #reconnect then subscriptions will be renewed.
 >    client.subscribe("broker/messages")
-># The callback for when a PUBLISH message is received from the server.
->def on_message(client, userdata, msg):
->    print(msg.topic+" "+str(msg.payload))
->client = mqtt.Client()
->client.on_connect = on_connect
->client.on_message = on_message
->client.connect("localhost", 1883, 60)
-># Blocking call that processes network traffic, dispatches callbacks and
-># handles reconnecting.
-># Other loop*() functions are available that give a threaded interface and a
-># manual interface.
->client.loop_forever()
+> #The callback for when a PUBLISH message is received from the server.
+> def on_message(client, userdata, msg):
+>     print(msg.topic+" "+str(msg.payload))
+> client = mqtt.Client()
+> client.on_connect = on_connect
+> client.on_message = on_message
+> client.connect("localhost", 1883, 60)
+> #Blocking call that processes network traffic, dispatches callbacks and
+> #handles reconnecting.
+> #Other loop*() functions are available that give a threaded interface and a
+> #manual interface.
+> client.loop_forever()
 
-In terminal line
-	python subscribe.py
-	pyhton publish.py “test”
+#### In terminal line
+	- python subscribe.py
+	- pyhton publish.py “test”
 
 #Mosquito Configuration Properties 
 	
