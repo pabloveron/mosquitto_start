@@ -25,7 +25,7 @@ First of all, need to install python tools and library paho-mqtt
 	- pip install paho-mqtt
 
 
-Here the inspiration source code [link](www.eclipse.org/paho/clients/python/)
+Here the inspiration source code [link1](www.eclipse.org/paho/clients/python/)
 
 #### publish.py
 > #-*- coding: utf-8 -*-
@@ -61,14 +61,14 @@ Here the inspiration source code [link](www.eclipse.org/paho/clients/python/)
 	- python subscribe.py
 	- pyhton publish.py “test”
 
-#Mosquito Configuration Properties 
+# Mosquito Configuration Properties 
 	
-	pid_file = contains the pid number. Simplifies the search of the process id.
-	persistence =If true, connection, subscription and message data will be written to the disk in mosquitto.db
-	persistence_location = indicates the location of the mosquitto.db 
-	allow_dupicate_messages = prevent to the client to receive the same message when it is subscribed to multiple topics that overlap. The broker keep track of the message. If disabled it, the clients should manage the duplicated messages.
-	Persistent_client_expiration = indicates the time required for the broker to keep a client that 
+	- pid_file = contains the pid number. Simplifies the search of the process id.
+	- persistence =If true, connection, subscription and message data will be written to the disk in mosquitto.db
+	- persistence_location = indicates the location of the mosquitto.db 
+	- allow_dupicate_messages = prevent to the client to receive the same message when it is subscribed to multiple topics that overlap. The broker keep track of the message. If disabled it, the clients should manage the duplicated messages.
+	- persistent_client_expiration = indicates the time required for the broker to keep a client that 
 	
-	More properties here Mosquitto Config --> https://mosquitto.org/man/mosquitto-conf-5.html
-	More explanations here Mosquitto Doc -->https://mosquitto.org/man/mqtt-7.html
+	More properties here Mosquitto Config [link2](https://mosquitto.org/man/mosquitto-conf-5.html)
+	More explanations here Mosquitto Doc [link3](https://mosquitto.org/man/mqtt-7.html)
 
