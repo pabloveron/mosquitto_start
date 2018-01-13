@@ -24,7 +24,7 @@ First of all, need to install python tools and library paho-mqtt
 	pip install paho-mqtt
 
 
-Here the source code (based on * [link](www.eclipse.org/paho/clients/python/) - ://eclipse)
+Here the inspiration source code * [link](www.eclipse.org/paho/clients/python/) -)
 
 publish.py
 ># -*- coding: utf-8 -*-
