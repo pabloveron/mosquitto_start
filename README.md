@@ -28,9 +28,9 @@ First of all, need to install python tools and library paho-mqtt
 Here the inspiration source code [link1](www.eclipse.org/paho/clients/python/)
 
 #### publish.py
-> #-*- coding: utf-8 -*-
-> import paho.mqtt.client as mqtt
-> import sys
+>#-*- coding: utf-8 -*-
+>import paho.mqtt.client as mqtt
+>import sys
 > mqttc = mqtt.Client("python_pub")
 > mqttc.connect("localhost", 1883)
 > mqttc.publish("broker/messages", sys.argv[1])
@@ -75,5 +75,6 @@ Here the inspiration source code [link1](www.eclipse.org/paho/clients/python/)
 - persistent_client_expiration = indicates the time required for the broker to keep a client that 
 	
 More properties here Mosquitto Config [link2](https://mosquitto.org/man/mosquitto-conf-5.html)
+
 More explanations here Mosquitto Doc [link3](https://mosquitto.org/man/mqtt-7.html)
 
