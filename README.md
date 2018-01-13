@@ -25,14 +25,12 @@ First of all, need to install python tools and library paho-mqtt
 - pip install paho-mqtt
 
 
-### Download the code inspired on [link1](www.eclipse.org/paho/clients/python/)
-
-#### In terminal line
+### Download the code inspired on [link1](www.eclipse.org/paho/clients/python/) and run the next commands
 
 - python subscribe.py
 - pyhton publish.py “test”
 
-#### Mosquito Configuration Properties 
+## Mosquito Configuration Properties 
 
 - pid_file = contains the pid number. Simplifies the search of the process id.
 - persistence = If true, connection, subscription and message data will be 
