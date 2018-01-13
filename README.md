@@ -29,12 +29,19 @@ Here the inspiration source code [link1](www.eclipse.org/paho/clients/python/)
 
 #### publish.py
 >#-*- coding: utf-8 -*-
+
 >import paho.mqtt.client as mqtt
+
 >import sys
+
 > mqttc = mqtt.Client("python_pub")
+
 > mqttc.connect("localhost", 1883)
+
 > mqttc.publish("broker/messages", sys.argv[1])
+
 > mqttc.loop(2) #timeout = 2s
+
 
 #### Subscribe.py
 > import paho.mqtt.client as mqtt
