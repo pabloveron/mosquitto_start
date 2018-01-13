@@ -58,8 +58,9 @@ Here the inspiration source code [link1](www.eclipse.org/paho/clients/python/)
 > client.loop_forever()
 
 #### In terminal line
-	- python subscribe.py
-	- pyhton publish.py “test”
+
+- python subscribe.py
+- pyhton publish.py “test”
 
 #### Mosquito Configuration Properties 
 
